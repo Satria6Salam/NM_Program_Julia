@@ -1,0 +1,85 @@
+1. Membuat plot baru vs menambah ke plot yang sudah ada
+
+    > plot(args...; kw...) → membuat plot baru.
+    > plot!(args...; kw...) → menambah (overlay) ke plot yang sudah ada ("modify current").
+    > Alternatif: plot!(plt, args...; kw...) jika kamu punya objek plot plt.
+
+2. Bentuk input yang bisa dipakai
+Beberapa cara memasukkan data ke plot:
+
+Bentuk	                Contoh
+Vektor                  y saja	plot(rand(10)) → asumsi sumbu x = 1:10
+Pasang                  x dan y	plot(1:10, rand(10))
+Banyak seri sekaligus	plot(rand(10,5)) → 5 seri dengan x = 1:10
+Fungsi terus domain	    plot(sin, 0:0.1:π)
+Gabungan fungsi/fungsi	plot([sin, cos], 0:π)
+
+3. Keyword / argumen untuk kustomisasi
+Beberapa keyword umum:
+
+    xlabel, ylabel: label untuk sumbu x / y.
+    title: judul plot.
+    legend: posisi legend (misal :topright, :topleft dsb).
+    color (alias c), marker: warna garis atau marker.
+    line: pengaturan garis (misal style, width).
+    xlims, ylims: batas sumbu x / y.
+    xticks, yticks: di mana tick-nya.
+    Ada juga alias-alias pendek (misal c = buat warna).
+
+
+# exp: nilai Eksponensial
+# xlims & ylims: batas sumbu x & y
+# xticks $ yticks: menampilkan posisi angka sumbu x dan ys3
+# legend: untuk mengatur posisi keterangan (label) Grafik
+# | Nilai            | Posisi Legend           |
+# | ---------------- | ----------------------- |
+# | `:top`           | Bagian atas tengah      |
+# | `:bottom`        | Bagian bawah tengah     |
+# | `:left`          | Sebelah kiri tengah     |
+# | `:right`         | Sebelah kanan tengah    |
+# | `:topleft`       | Pojok kiri atas         |
+# | `:topright`      | Pojok kanan atas        |
+# | `:bottomleft`    | Pojok kiri bawah        |
+# | `:bottomright`   | Pojok kanan bawah       |
+# | `:outertopleft`  | Di luar plot kiri atas  |
+# | `:outertopright` | Di luar plot kanan atas |
+
+# Pilihan linestyle lain yang umum:
+# Nilai	        Gaya garis
+# :solid	    Garis penuh (default)
+# :dash	        Garis putus-putus
+# :dot	        Garis titik-titik
+# :dashdot	    Kombinasi garis-putus dan titik
+# :dashdotdot	Garis dengan pola dash + dua titik
+
+# | Nama (Symbol) | Warna      | Hex Code  | Contoh Pemakaian             |
+# | ------------- | ---------- | --------- | ---------------------------- |
+# | `:red`        | 🔴 Merah   | `#FF0000` | `plot(x, y, color=:red)`     |
+# | `:blue`       | 🔵 Biru    | `#0000FF` | `plot(x, y, color=:blue)`    |
+# | `:green`      | 🟢 Hijau   | `#00FF00` | `plot(x, y, color=:green)`   |
+# | `:black`      | ⚫ Hitam    | `#000000` | `plot(x, y, color=:black)`   |
+# | `:white`      | ⚪ Putih    | `#FFFFFF` | `plot(x, y, color=:white)`   |
+# | `:yellow`     | 🟡 Kuning  | `#FFFF00` | `plot(x, y, color=:yellow)`  |
+# | `:orange`     | 🟠 Oranye  | `#FFA500` | `plot(x, y, color=:orange)`  |
+# | `:purple`     | 🟣 Ungu    | `#800080` | `plot(x, y, color=:purple)`  |
+# | `:pink`       | 🌸 Pink    | `#FFC0CB` | `plot(x, y, color=:pink)`    |
+# | `:gray`       | ⚪ Abu-abu  | `#808080` | `plot(x, y, color=:gray)`    |
+# | `:brown`      | 🟤 Coklat  | `#8B4513` | `plot(x, y, color=:brown)`   |
+# | `:cyan`       | 🟦 Cyan    | `#00FFFF` | `plot(x, y, color=:cyan)`    |
+# | `:magenta`    | 🟪 Magenta | `#FF00FF` | `plot(x, y, color=:magenta)` |
+
+# | Palet       | Keterangan                          |
+# | ----------- | ----------------------------------- |
+# | `:default`  | Palet bawaan JuliaPlots             |
+# | `:grays`    | Warna abu-abu bertingkat            |
+# | `:tab10`    | 10 warna berbeda (mirip matplotlib) |
+# | `:pastel1`  | Warna pastel lembut                 |
+# | `:darktest` | Warna kontras gelap                 |
+
+4.  Plot Skala Logaritmik
+    Skala logaritmik digunakan untuk data yang tumbuh / mengecil sangat cepat.
+    xscale dan yscale bisa diatur ke: log10 atau :ln.
+    jenis:
+    >   Semilog-x --> xscale=:log10
+    >   Semilog-y --> yscale=:log10
+    >   Log-Log --> keduanya logaaritmik

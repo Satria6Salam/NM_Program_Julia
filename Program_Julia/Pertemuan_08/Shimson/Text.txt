@@ -1,0 +1,24 @@
+Metode Simpson 1/3 adalah teknik integrasi numerik yang memberikan 
+aproksimasi lebih akurat dibanding metode Trapesium. Ia bekerja 
+dengan mendekatkan fungsi menggunakan polinom derajat 2 (parabola).
+
+1. Syarat Utama
+Syarat penggunaan Simpson 1/3: n harus genap
+Karena setiap dua interval dipakai untuk membentuk satu parabola.
+
+Intuisi Kenapa Pembobotannya 1, 4, 2, 4, 2 ... 4, 1
+    Metode Simpson 1/3 adalah integral dari polinom interpolasi kuadratik (Newton / Lagrange).
+    Saat menghitung integral polinom itu, koefisien yang muncul adalah 1/6 · (1, 4, 1) untuk satu parabola.
+    Ketika digabung (komposit), titik genap menjadi titik tengah parabola pertama dan titik tengah parabola kedua → koefisiennya menjadi 2.
+
+Kelebihan
+
+✔ lebih akurat dari Trapesium
+✔ efisien untuk fungsi halus
+✔ error kecil dengan n tidak terlalu besar
+
+Kekurangan
+
+✘ n harus genap
+✘ kurang cocok untuk fungsi dengan perubahan tajam
+✘ butuh lebih banyak operasi daripada Trapesium

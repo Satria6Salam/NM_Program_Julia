@@ -1,0 +1,23 @@
+1. Pengertian
+
+Metode Secant adalah teknik numerik untuk mencari akar suatu fungsi tanpa perlu menghitung turunan.
+Metode ini menggunakan dua tebakan awal dan membentuk garis secant (garis melalui dua titik pada 
+grafik fungsi), lalu memotong sumbu x.
+
+Metode ini merupakan pengembangan dari Newton–Raphson, tetapi lebih praktis karena turunan tidak perlu dihitung.
+
+Kelebihan Metode Secant
+
+✔ Tidak perlu turunan fungsi
+✔ Lebih cepat daripada metode bisection
+✔ Lebih sederhana daripada Newton-Raphson
+✔ Cocok untuk fungsi yang sulit diturunkan
+
+Kekurangan Metode Secant
+
+✘ Tidak selalu konvergen
+✘ Membutuhkan dua nilai awal
+✘ Bisa gagal jika dua nilai awal menghasilkan nilai fungsi yang sama (pembagian nol)
+
+👉 Metode Secant mencari nilai akar (root) dari suatu persamaan.
+👉 Yaitu nilai x yang membuat f(x) = 0.

@@ -1,0 +1,21 @@
+METODE SIMPSON 3/8
+Simpson 3/8 adalah metode integrasi numerik yang menggunakan polinom interpolasi 
+derajat 3 (kubik) untuk mendekati kurva fungsi.
+Ia disebut 3/8 karena koefisien dalam rumus menghasilkan faktor: (3/8)h
+Metode ini adalah pelengkap dari Simpson 1/3 dan biasanya digunakan bila jumlah subinterval kelipatan 3.
+
+1. Kapan Simpson 3/8 digunakan?
+Simpson 3/8 membutuhkan n harus kelipatan 3
+Karena satu polinom kubik membutuhkan empat titik (tiga subinterval).
+
+Kelebihan
+
+    Akurasi tinggi (orde 4)
+    Cocok untuk fungsi kompleks dan melengkung tajam
+    Bisa dipakai ketika Simpson 1/3 tidak sesuai (misalnya n=3,6,9,…)
+
+Kekurangan
+
+    Harus menggunakan n kelipatan 3
+    Lebih rumit dari Simpson 1/3
+    Tidak seefisien Simpson 1/3 untuk n besar

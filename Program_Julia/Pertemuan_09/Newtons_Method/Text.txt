@@ -1,0 +1,17 @@
+NEWTON METHOD FOR OPTIMIZATION
+
+Newton Method adalah metode iteratif untuk mencari titik minimum atau maksimum dari suatu fungsi. 
+Dibandingkan metode gradien biasa, Newton Method memakai informasi turunan kedua (Hessian) 
+sehingga konvergensinya sangat cepat (biasanya quadratic convergence).
+
+7. Kelebihan Newton Method
+
+✔ Sangat cepat (quadratic convergence)
+✔ Akurat jika mendekati solusi
+✔ Dapat digunakan untuk fungsi multivariabel
+
+8. Kekurangan Newton Method
+
+✘ Membutuhkan turunan kedua (kadang sulit)
+✘ Jika Hessian tidak positif-definite → tidak dijamin menuju minimum
+✘ Jika tebakan awal jauh dari solusi → bisa divergen

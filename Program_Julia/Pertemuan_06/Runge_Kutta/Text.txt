@@ -1,0 +1,25 @@
+METODE RUNGE-KUTTA ORDE 2 (RK2)
+
+Metode Runge-Kutta orde 2 adalah pengembangan dari Metode Euler untuk 
+mendapatkan hasil yang lebih akurat tanpa menambah beban komputasi terlalu besar.
+Metode ini termasuk metode dua tingkat (two-stage method) karena menggunakan 
+dua perkiraan kemiringan (slope):
+
+    > satu di awal interval
+    > satu di akhir interval atau titik tengah
+
+Tujuan RK2
+
+Digunakan untuk menyelesaikan persamaan diferensial:
+untuk menghitung nilai y di titik Xn+1 RK2 memberi 
+akurasi lebih baik daripada Euler, tetapi tetap lebih ringan dibanding RK4.
+
+2. Ide Dasar Metode
+
+Intinya:
+
+    Hitung kemiringan di awal interval → k1​
+    Gunakan kemiringan awal untuk memperkirakan titik sementara
+    Hitung kemiringan baru → k2
+    Gunakan rata-rata kemiringan (kombinasi k1 dan k2​) untuk memperbaiki nilai berikutnya
+    Metode ini sering dianggap sebagai “Euler yang diperbaiki.”

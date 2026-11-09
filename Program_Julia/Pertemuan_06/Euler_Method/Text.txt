@@ -1,0 +1,18 @@
+Turunan 𝑑𝑦/𝑑𝑥 berarti laju perubahan kemiringan grafik.
+Euler mendekati solusi kurva dengan garis lurus (tangent line) pada titik awal.
+Melangkah sedikit (h) lalu memperbarui nilai fungsi menggunakan kemiringan di titik sebelumnya.
+Metode Euler = pendekatan solusi PDB dengan memindahkan titik sedikit demi sedikit sepanjang arah kemiringan (turunan) pada tiap titik.
+
+Kelebihan Metode Euler
+
+✔ Sederhana dan cepat
+✔ Mudah diimplementasikan dalam program / coding
+✔ Cocok untuk gambaran awal solusi ODE
+
+Kekurangan
+
+✘ Ketelitian rendah
+✘ Error cepat bertambah kalau step terlalu besar
+✘ Butuh step kecil agar akurat → komputasi lebih banyak
+
+Error perkiraan garis lurus membuat solusi bisa “melenceng jauh” dari kurva sebenarnya.

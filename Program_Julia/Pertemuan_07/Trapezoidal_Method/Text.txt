@@ -1,0 +1,21 @@
+Apa itu Metode Trapesium?
+
+Metode trapesium adalah teknik aproksimasi numerik untuk menghitung integral tertentu:
+Intinya, kurva fungsi f(x) tidak dihitung persis, tetapi disekat-sekat menjadi bentuk 
+trapesium, lalu luas trapesium tersebut dijumlahkan.
+
+Metode ini berguna ketika:
+    integral tidak bisa diselesaikan secara analitik
+    fungsi rumit atau berbentuk data ukur (tabel)
+    ingin mendapatkan hasil cepat dengan akurasi cukup baik
+
+Kelebihan
+
+✔ mudah diimplementasikan
+✔ bekerja untuk fungsi smooth
+✔ hasil cukup akurat jika 𝑛 besar
+
+Kekurangan
+
+✘ akurasi lebih rendah dibanding Simpson
+✘ error lebih besar pada fungsi yang melengkung tajam
